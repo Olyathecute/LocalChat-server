@@ -1,6 +1,6 @@
 const express = require('express')
 const http = require('http')
-const { Server } = require('socket.socketIO')
+const { Server } = require('socket.io')
 const cors = require('cors')
 const app = express()
 
@@ -69,6 +69,6 @@ socketIO.on('connection', (socket) => {
   })
 })
 
-server.listen(5000, () => {
+server.listen(8080, () => {
   console.log('Server is running')
 })
