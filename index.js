@@ -11,6 +11,7 @@ app.use(cors({ origin: '*' }))
 app.use(route)
 
 const server = http.createServer(app)
+const PORT = process.env.PORT || 8080
 
 const socketIO = new Server(server, {
   cors: {
@@ -64,6 +65,6 @@ socketIO.on('connection', (socket) => {
   })
 })
 
-server.listen(8080, () => {
-  console.log('Server is running')
+server.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`)
 })
